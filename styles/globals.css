@@ -31,3 +31,17 @@ body {
     text-wrap: balance;
   }
 }
+
+.buttonTest{
+  color: white;
+  background-color: darkgray;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all ease 2s;
+  border-color: aqua;
+  border-width: 5px;
+}
+
+.buttonTest:hover{
+  transform: translateX(-10px);
+}
