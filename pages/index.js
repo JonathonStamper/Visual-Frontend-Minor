@@ -11,6 +11,7 @@ export default function Home() {
     >
      <h1 className="text-8xl font-bold">Hello world</h1>
      <Image alt='Example images' src='/Example_Image.jpg' className="w-screen h-screen absolute -z-10" width={300} height={300}/>
+     <button className="buttonTest">Button Transition</button>
     </main>
   );
 }
