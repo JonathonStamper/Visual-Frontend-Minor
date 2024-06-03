@@ -37,11 +37,107 @@ body {
   background-color: darkgray;
   padding: 10px;
   border-radius: 10px;
-  transition: all ease 2s;
+  transition: all ease 1s;
   border-color: aqua;
   border-width: 5px;
 }
 
 .buttonTest:hover{
-  transform: translateX(-10px);
+  transform: translatey(-10px);
 }
+
+
+.animate{
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+
+.animate.animation--infite{
+  animation-iteration-count: infinite;
+}
+
+.animate.animation--delay{
+  animation-delay: 1s;
+}
+
+.animate.animation--slow{
+  animation-duration: 3s;
+}
+
+.animate.animation--fast{
+  animation-duration: 0.5s;
+}
+
+@keyframes slideInLeft{
+  from{
+    transform: translateX(-300px)
+  }
+
+  to{
+    transform: translateX(0px);
+  }
+}
+
+.slideInLeft{
+  animation-name: slideInLeft;
+  animation-timing-function: ease;
+  /* animation-name, duration, animation-timg, delay, iteation, direction, fill-mode */
+}
+
+@keyframes Rotate{
+  from{
+    transform: rotate(0)
+  }
+
+  to{
+    transform: rotate(360deg)
+  }
+}
+
+.Rotate{
+  animation-name: Rotate;
+  animation-timing-function: linear;
+  transform-origin: center;
+  /* animation-name, duration, animation-timg, delay, iteation, direction, fill-mode */
+}
+
+
+
+
+
+/* Loading animation attmpt */
+@keyframes animationload1{
+  0%, 100%{
+    transform: translateY(0px);
+  }
+
+  50%{
+    transform: translateY(-10px);
+  }
+}
+
+
+.loader span{
+  background: #e2e6ff;
+  width: 15px;
+  height: 15px;
+  
+  animation-name: animationload1;
+  animation-duration: 2s;
+  animation-delay: calc(var(--i) * 0.4s);
+  animation-iteration-count: infinite;
+  border-radius: 100%;
+}
+
+.loader span::before{
+  content: '';
+  background: #e2e6ff;
+  width: 15px;
+  height: 5px;
+  position: absolute;
+  opacity: 40%;
+  border-radius: 100%;
+  top: 20px
+}
+
