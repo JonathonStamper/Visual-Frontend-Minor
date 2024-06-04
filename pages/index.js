@@ -18,7 +18,7 @@ export default function Home() {
         width={300}
         height={300}
       />
-      <Earth />
+      {/* <Earth /> */}
     </main>
   );
 }
