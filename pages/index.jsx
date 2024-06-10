@@ -1,10 +1,17 @@
 import Link from "next/link";
 import Spline from "@splinetool/react-spline";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { useRef } from "react";
 
 export default function Home() {
   const characters = useRef();
 
+  /*Loads character data*/
   function onLoad(spline) {
     const obj = spline.findObjectByName("Characters");
     characters.current = obj;
@@ -12,17 +19,19 @@ export default function Home() {
     console.log(obj);
   }
 
-  function onMouseDown(e) {
-    if (e.target.name === "Joey") {
-      console.log("I have been clicked, Joey");
-    } else if (e.target.name === "Jonathon") {
-      console.log("I have been clicked, Jonathon");
-    } else if (e.target.name === "Bo") {
-      console.log("I have been clicked!, Bo");
-    } else if (e.target.name === "Jullian") {
-      console.log("I have been clicked, Julian");
-    }
-  }
+  /*Onclick events characters*/
+  // function onMouseDown(e) {
+  //   if (e.target.name === "Joey") {
+  //     console.log("I have been clicked, Joey");
+  //     setShowText(true);
+  //   } else if (e.target.name === "Jonathon") {
+  //     setShowText(true);
+  //   } else if (e.target.name === "Bo") {
+  //     setShowText(true);
+  //   } else if (e.target.name === "Jullian") {
+  //     setShowText(true);
+  //   }
+  // }
 
   return (
     <section className="flex h-screen layout">
@@ -37,12 +46,21 @@ export default function Home() {
         <p>Made By: Joey, Julian, Bo, Jonathan</p>
       </div>
       <div className="bg-[url('/media/space.jpg')] w-full h-full bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center">
-        <Spline
-          scene="https://prod.spline.design/eoDfixn1U745RWEh/scene.splinecode"
-          style={{ width: "100%", height: "500px" }}
-          onLoad={onLoad}
-          onMouseDown={onMouseDown}
-        />
+        <div className="relative">
+          <Spline
+            scene="https://prod.spline.design/eoDfixn1U745RWEh/scene.splinecode"
+            style={{ width: "650px", height: "600px" }}
+            onLoad={onLoad}
+          />
+          <h2 className="absolute text-white bottom-10 right-52">Joey</h2>
+          <h2 className="absolute text-white top-0 right-56 rotate-45">
+            Jonathan
+          </h2>
+          <h2 className="absolute text-white bottom-32 right-20 rotate-12">
+            Julian
+          </h2>
+          <h2 className="absolute text-white bottom-32 left-52 rotate-6">Bo</h2>
+        </div>
         <Link href="/lobby">
           <button className="bg-theme-Purple text-white text-2xl font-bold p-7 rounded-lg">
             Explore Our Worlds

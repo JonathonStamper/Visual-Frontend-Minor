@@ -1,8 +1,7 @@
 import { Inter } from "next/font/google";
 import { useRef } from "react";
 import Spline from "@splinetool/react-spline";
-import Link from "next/link";
-
+import Layout from "@/components/layout";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -15,22 +14,20 @@ export default function Home() {
   }
 
   function onLoad(spline) {
-    const obj = spline.findObjectByName("Front");
+    const obj = spline.findObjectByName("Portals");
     door.current = obj;
 
     console.log(obj);
   }
 
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center relative justify-between ${inter.className}`}
-    >
+    <Layout data={door}>
       <Spline
         scene="https://prod.spline.design/bUNlFNnP-OCXGLX2/scene.splinecode"
         onLoad={onLoad}
         onMouseDown={onMouseDown}
         style={{ width: "100%", height: "100vh" }}
       />
-    </main>
+    </Layout>
   );
 }
