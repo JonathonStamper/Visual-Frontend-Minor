@@ -1,78 +1,54 @@
-import { Inter } from "next/font/google";
-import { useRef } from "react";
+import Link from "next/link";
 import Spline from "@splinetool/react-spline";
-import { useState } from "react";
-
-const inter = Inter({ subsets: ["latin"] });
+import { useRef } from "react";
 
 export default function Home() {
-  const door = useRef();
-  const [open, setOpen] = useState(false);
-
-  function onMouseDown(e) {
-    if (e.target.name === "bg") {
-      setOpen(true);
-      console.log("I have been clicked!");
-    }
-  }
+  const characters = useRef();
 
   function onLoad(spline) {
-    const obj = spline.findObjectByName("door");
-    door.current = obj;
+    const obj = spline.findObjectByName("Characters");
+    characters.current = obj;
 
     console.log(obj);
   }
 
-  return (
-    <main
-      className={`flex min-h-screen flex-col items-center relative justify-between ${inter.className}`}
-    >
-      <Spline
-        scene="https://prod.spline.design/bUNlFNnP-OCXGLX2/scene.splinecode"
-        style={{ width: "100%", height: "100%" }}
-      />
+  function onMouseDown(e) {
+    if (e.target.name === "Joey") {
+      console.log("I have been clicked, Joey");
+    } else if (e.target.name === "Jonathon") {
+      console.log("I have been clicked, Jonathon");
+    } else if (e.target.name === "Bo") {
+      console.log("I have been clicked!, Bo");
+    } else if (e.target.name === "Jullian") {
+      console.log("I have been clicked, Julian");
+    }
+  }
 
-      <section className="flex gap-10 mx-auto max-w-[1440px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="flex gap-5 flex-col items-center text-center">
-          <div className="relative w-[450px] h-[550px]">
-            <Spline
-              scene="https://prod.spline.design/gQPHYIFpOkM1LM40/scene.splinecode"
-              style={{
-                width: "450px",
-                height: "550px",
-              }}
-              onMouseDown={onMouseDown}
-            />
-          </div>
-          <h1 className="absolute">{open ? "ja" : "nee"}</h1>
-        </div>
-        <div className="flex gap-5 flex-col items-center text-center">
-          <div className="relative w-[450px] h-[550px]">
-            <Spline
-              style={{
-                width: "450px",
-                height: "550px",
-              }}
-              onLoad={onLoad}
-              onMouseDown={onMouseDown}
-              scene="https://prod.spline.design/gQPHYIFpOkM1LM40/scene.splinecode"
-            />
-          </div>
-        </div>
-        <div className="flex gap-5 flex-col items-center text-center">
-          <div className="relative w-[450px] h-[550px]">
-            <Spline
-              style={{
-                width: "450px",
-                height: "550px",
-              }}
-              onLoad={onLoad}
-              onMouseDown={onMouseDown}
-              scene="https://prod.spline.design/gQPHYIFpOkM1LM40/scene.splinecode"
-            />
-          </div>
-        </div>
-      </section>
-    </main>
+  return (
+    <section className="flex h-screen layout">
+      <div className="bg-theme-Black text-white  h-full layout w-full flex flex-col justify-between pt-16 pb-16 px-16 relative  bg-[url('/media/gradient.png')] bg-no-repeat bg-[top_10rem_left_10rem]">
+        <Link href="/" className="font-bold">
+          Portfolio.
+        </Link>
+        <h1 className="text-7xl max-w-[649px]">
+          Welcome to our
+          <span className="ml-5 text-theme-Purple">Working space</span>
+        </h1>
+        <p>Made By: Joey, Julian, Bo, Jonathan</p>
+      </div>
+      <div className="bg-[url('/media/space.jpg')] w-full h-full bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center">
+        <Spline
+          scene="https://prod.spline.design/eoDfixn1U745RWEh/scene.splinecode"
+          style={{ width: "100%", height: "500px" }}
+          onLoad={onLoad}
+          onMouseDown={onMouseDown}
+        />
+        <Link href="/lobby">
+          <button className="bg-theme-Purple text-white text-2xl font-bold p-7 rounded-lg">
+            Explore Our Worlds
+          </button>
+        </Link>
+      </div>
+    </section>
   );
 }
