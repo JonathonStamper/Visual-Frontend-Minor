@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -26,11 +33,6 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
 
 .buttonTest{
   color: white;
@@ -117,14 +119,24 @@ body {
   }
 }
 
+@keyframes animationload1_Scale{
+  0%, 100%{
+    transform: scale(10%)
+  }
+
+  50%{
+    transform: translateY(100%);
+  }
+}
+
 
 .loader span{
-  background: #e2e6ff;
+  background: var(--c);
   width: 15px;
   height: 15px;
   
   animation-name: animationload1;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-delay: calc(var(--i) * 0.4s);
   animation-iteration-count: infinite;
   border-radius: 100%;
@@ -138,6 +150,342 @@ body {
   position: absolute;
   opacity: 40%;
   border-radius: 100%;
-  top: 20px
+  top: 20px;
+
+  animation-name: animationload1_Scale;
+  animation-duration: 3s;
+  animation-delay: calc(var(--i) * 0.4s);
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
 }
+
+
+
+@keyframes Planetary_Rotation{
+  from{
+    transform: rotate(calc(0deg * var(--i2)) );
+  } 
+
+  to{
+    transform: rotate(calc(360deg * var(--i2)) );
+
+  }
+}
+
+
+.loader2{
+  border-radius: 100%;
+  border-color: #e2e6ff;
+  
+}
+
+.loader2 span{
+  width: 50px;
+
+  position: absolute;
+  border-radius: 100%;
+  transform: rotate(calc(90deg * var(--i2)));
+    animation-name: Planetary_Rotation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.loader2 span::before{
+  content: '';
+  background: var(--c2);
+  width: 15px;
+  height: 15px;
+  
+  position: absolute;
+  border-radius: 100%;
+
+
+}
+
+
+/* Animation 3 */
+@keyframes Planetary_Rotation2{
+  from{
+    transform: rotate(calc(0deg * var(--i3)) );
+  } 
+
+  to{
+    transform: rotate(calc(360deg * var(--i3)) );
+
+  }
+}
+
+.loader3{
+  border-radius: 100%;
+  border-color: #e2e6ff;
+  
+}
+
+.loader3 span{
+  width: 50px;
+
+  position: absolute;
+  border-radius: 100%;
+  /* transform: rotate(calc(90deg * var(--i3))); */
+  animation-name: Planetary_Rotation2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+.loader3 span::before{
+  content: '';
+  background: var(--c3);
+  width: 15px;
+  height: 15px;
+  
+  position: absolute;
+  border-radius: 100%;
+
+
+}
+
+
+/*3D world loading animations*/
+@keyframes threeDAnimation{
+  0%,100%{
+    transform: translateZ(-450px) translateX(0px)
+  }
+
+  50%{
+    transform:  translateZ(30px) translateX(50px);
+  }
+
+  70%{
+    transform:  translateZ(-250px) ;
+  }
+}
+
+
+
+.loader4 {
+  perspective: 1000px; /* Adding perspective to the parent container */
+}
+
+
+
+.loader4 span{
+  background: var(--c4);
+  width: 15px;
+  height: 15px;
+  position: relative;
+  border-radius: 100%;
+
+
+  animation-name: threeDAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay:  calc(var(--i4) * 0.5s);
+  
+}
+
+
+
+/* Attempt2 */
+@keyframes Planet1{
+  0%,100%{
+    transform: translateZ(-100px) translateX(0px);
+  }
+  25%{
+    transform: translateZ(400px) translateX(20px);
+  }
+
+  50%{
+    transform: translateZ(-100px) translateX(40px);
+  }
+  75%{
+    transform: translateZ(-500px) translateX(20px);
+  }
+
+}
+
+@keyframes Planet4{
+  0%,100%{
+    transform: translateZ(-100px) translateX(0px);
+  }
+  25%{
+    transform: translateZ(-700px) translateX(-40px);
+  }
+
+  50%{
+    transform: translateZ(-100px) translateX(-80px);
+  }
+  75%{
+    transform: translateZ(500px) translateX(-40px);
+  }
+
+}
+
+@keyframes Planet3{
+  0%,100%{
+    transform: translateZ(300px) translateX(0px);
+  }
+  15%{
+    transform: translateZ(-100px) translateX(25px);
+  }
+
+  50%{
+    transform: translateZ(-400px) translateX(-60px);
+  }
+  90%{
+    transform: translateZ(500px) translateX(-10px);
+  }
+  
+
+}
+
+@keyframes Planet2{
+  0%,100%{
+    transform: translateZ(300px) translateX(0px);
+  }
+  10%{
+    transform: translateZ(500px) translateX(10px);
+  }
+
+  40%{
+    transform: translateZ(-100px) translateX(50px);
+  }
+  60%{
+    transform: translateZ(-500px) translateX(-5px);
+
+  }
+
+  70%{
+    transform: translateZ(-100px) translateX(-20px);
+
+  }
+
+  90%{
+    transform: translateZ(200px) translateX(-10px);
+  }
+  
+
+}
+
+.loader5 {
+  perspective: 1000px; /* Adding perspective to the parent container */
+}
+
+
+
+.loader5 span{
+  background: var(--c5);
+  width: 15px;
+  height: 15px;
+  position: relative;
+  border-radius: 100%;
+
+
+  animation-name: theeDAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay:  calc(var(--i4) * 0.5s);
+  
+}
+
+/* .loader5 span.planet1{
+animation-name: Planet1;
+animation-duration: 5s;
+animation-timing-function: linear;
+animation-fill-mode: both;
+animation-iteration-count: infinite;
+} */
+
+/* .loader5 span.planet2{
+  
+animation-name: Planet2;
+animation-duration: 5s;
+animation-timing-function: linear;
+animation-fill-mode: both;
+animation-iteration-count: infinite;
+}
+
+.loader5 span.planet3{
+  
+  animation-name: Planet3;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-delay: 0.2s;
+  } */
+
+
+.loader5 span.planet4{
+  z-index: -10;
+  animation-name: Planet4;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  }
+
+
+
+
+  /* Last attempt */
+@keyframes TDAnimation{
+  from{
+    transform: rotateY(calc(var(--i6) * 90deg));
+  }
+
+  to{
+    transform: rotateY(calc(var()));
+  }
+}
+
+.loader6 span{
+  background: var(--c6);
+  width: 15px;
+  height: 15px;
+  position: relative;
+  border-radius: 100%;
+
+}
+
+
+
+
+
+
+@keyframes PopUpAnimation{
+  0%{
+    transform: scale(0%) ;
+  }
+  
+
+  90%{
+    transform: scale(103%) ;
+
+  }
+
+  100%{
+    transform: scale(100%) ;
+
+  }
+}
+
+.PopUpAnimation{
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 15p 35px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255, 0,25);
+  border-top: 1px solid rgba(255,255,255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5); 
+
+  overflow: hidden;
+  animation: PopUpAnimation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  transition: all;
+  animation-fill-mode: backwards;
+}
+
 
