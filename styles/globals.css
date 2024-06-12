@@ -488,4 +488,24 @@ animation-iteration-count: infinite;
   animation-fill-mode: backwards;
 }
 
+@keyframes CharacterAnimation{
+  0%{
+    transform: translateY(0px);
+  }
 
+  50%{
+    transform: translateY(-50px);
+  }
+
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+.CharacterAnimation div{
+  animation-name: CharacterAnimation;
+  animation-duration: 4s;
+  animation-delay: calc(0.5s * var(--c));
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
