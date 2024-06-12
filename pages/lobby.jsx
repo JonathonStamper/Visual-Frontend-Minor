@@ -7,25 +7,16 @@ export default function Home() {
   const [showModal, setShowModal] = useState(true);
   const door = useRef();
 
-  function onMouseDown(e) {
-    if (e.target.name === "Front") {
-      console.log("I have been clicked!");
-    }
-  }
-
   function onLoad(spline) {
-    const obj = spline.findObjectByName("Portals");
+    const obj = spline.findObjectByName("Doors");
     door.current = obj;
-
-    console.log(obj);
   }
 
   return (
     <Layout data={door}>
       <Spline
-        scene="https://prod.spline.design/bUNlFNnP-OCXGLX2/scene.splinecode"
+        scene="https://prod.spline.design/t8-IY41IMWdxlrWr/scene.splinecode"
         onLoad={onLoad}
-        onMouseDown={onMouseDown}
         style={{ width: "100%", height: "100vh" }}
       />
       {showModal && (

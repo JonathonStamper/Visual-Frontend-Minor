@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { Plus, Minus } from "lucide-react";
-import { useState } from "react";
+import { Plus, Minus, HomeIcon } from "lucide-react";
 
 export default function Layout({ children, data }) {
   const handleZoomIn = () => {
@@ -19,7 +18,7 @@ export default function Layout({ children, data }) {
       <main className="relative">
         <div className="absolute text-white w-[1440px] m-auto left-0 right-0 pt-16 flex flex-row justify-between ">
           <Link href="/" className="font-bold">
-            Portfolio.
+            Portal Horizon.
           </Link>
           <div className="flex flex-col gap-3">
             {data && (
@@ -36,6 +35,11 @@ export default function Layout({ children, data }) {
                 >
                   <Minus />
                 </button>
+                <Link href="/lobby">
+                  <button className="bg-white text-black p-3 text-xl rounded-[50%]">
+                    <HomeIcon />
+                  </button>
+                </Link>
               </>
             )}
           </div>
