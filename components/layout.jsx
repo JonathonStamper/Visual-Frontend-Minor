@@ -53,4 +53,3 @@ export default function Layout({ children, data, backToLobby = true }) {
     </>
   );
 }
-wd;
