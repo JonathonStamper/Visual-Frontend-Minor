@@ -1,4 +1,3 @@
-import { Inter } from "next/font/google";
 import { useRef, useState } from "react";
 import Spline from "@splinetool/react-spline";
 import Layout from "@/components/layout";
@@ -39,5 +38,3 @@ export default function Home() {
     </Layout>
   );
 }
-
-// absolute; left: 50%; transform: translateX(-50%)
