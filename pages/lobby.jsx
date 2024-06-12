@@ -1,9 +1,11 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Spline from "@splinetool/react-spline";
 import Layout from "@/components/layout";
+import Loading from "@/components/Loading";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const door = useRef();
 
   function onLoad(spline) {
@@ -11,14 +13,21 @@ export default function Home() {
     door.current = obj;
   }
 
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3500);
+  }, []);
+
   return (
     <Layout data={door} backToLobby={false}>
+      {isLoading && <Loading />}
       <Spline
         scene="https://prod.spline.design/t8-IY41IMWdxlrWr/scene.splinecode"
         onLoad={onLoad}
         style={{ width: "100%", height: "100vh" }}
       />
-      {showModal && (
+      {/* {showModal && (
         <div className="absolute bg-white p-10 rounded-sm left-[50%] translate-x-[-50%] top-[50%] max-w-[425px]">
           <h2 className="mb-5">Introduction</h2>
           <p className="mb-5">
@@ -34,7 +43,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </Layout>
   );
 }

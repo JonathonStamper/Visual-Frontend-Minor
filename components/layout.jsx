@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { Plus, Minus, HomeIcon } from "lucide-react";
+import Loading from "./Loading";
+import { useState, useEffect } from "react";
 
-export default function Layout({ children, data }) {
+export default function Layout({ children, data, backToLobby = true }) {
   const handleZoomIn = () => {
     if (data) {
       data.current.position.z -= 3000;
@@ -35,12 +37,14 @@ export default function Layout({ children, data }) {
                 >
                   <Minus />
                 </button>
-                <Link href="/lobby">
-                  <button className="bg-white text-black p-3 text-xl rounded-[50%]">
-                    <HomeIcon />
-                  </button>
-                </Link>
               </>
+            )}
+            {backToLobby && (
+              <Link href="/lobby">
+                <button className="bg-white text-black p-3 text-xl rounded-[50%]">
+                  <HomeIcon />
+                </button>
+              </Link>
             )}
           </div>
         </div>
@@ -49,3 +53,4 @@ export default function Layout({ children, data }) {
     </>
   );
 }
+wd;
