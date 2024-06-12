@@ -12,7 +12,7 @@ export default function Home() {
   }
 
   return (
-    <Layout data={door}>
+    <Layout data={door} backToLobby={false}>
       <Spline
         scene="https://prod.spline.design/t8-IY41IMWdxlrWr/scene.splinecode"
         onLoad={onLoad}
