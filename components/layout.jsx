@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { X, ArrowB, Undo2 } from "lucide-react";
 
-export default function Layout({ children, backToLobby = true }) {
+export default function Layout({ children }) {
   const router = useRouter();
 
   const handleClick = () => {
@@ -16,14 +16,12 @@ export default function Layout({ children, backToLobby = true }) {
             Portal Horizon.
           </Link>
           <div className="flex flex-col gap-3">
-            {backToLobby && (
-              <button
-                className="bg-white text-black p-3 text-xl rounded-[50%]"
-                onClick={handleClick}
-              >
-                <Undo2 />
-              </button>
-            )}
+            <button
+              className="bg-white text-black p-3 text-xl rounded-[50%]"
+              onClick={handleClick}
+            >
+              <Undo2 />
+            </button>
           </div>
         </div>
         {children}
