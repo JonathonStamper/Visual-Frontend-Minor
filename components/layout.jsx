@@ -1,7 +1,13 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { X, ArrowB, Undo2 } from "lucide-react";
 
 export default function Layout({ children, backToLobby = true }) {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.back();
+  };
   return (
     <>
       <main className="relative">
@@ -11,11 +17,12 @@ export default function Layout({ children, backToLobby = true }) {
           </Link>
           <div className="flex flex-col gap-3">
             {backToLobby && (
-              <Link href="/lobby">
-                <button className="bg-white text-black p-3 text-xl rounded-[50%]">
-                  <Undo2 />
-                </button>
-              </Link>
+              <button
+                className="bg-white text-black p-3 text-xl rounded-[50%]"
+                onClick={handleClick}
+              >
+                <Undo2 />
+              </button>
             )}
           </div>
         </div>
