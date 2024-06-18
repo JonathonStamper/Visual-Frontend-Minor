@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { X, ArrowB, Undo2 } from "lucide-react";
+import { Undo2, Camera } from "lucide-react";
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -8,6 +8,7 @@ export default function Layout({ children }) {
   const handleClick = () => {
     router.back();
   };
+
   return (
     <>
       <main className="relative">
@@ -21,6 +22,9 @@ export default function Layout({ children }) {
               onClick={handleClick}
             >
               <Undo2 />
+            </button>
+            <button className="bg-white text-black p-3 text-xl rounded-[50%]">
+              <Camera />
             </button>
           </div>
         </div>
