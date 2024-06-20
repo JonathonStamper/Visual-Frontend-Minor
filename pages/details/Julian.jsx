@@ -1,17 +1,10 @@
 import Layout from "@/components/layout";
 import Spline from "@splinetool/react-spline";
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Loading from "@/components/Loading";
 
 export default function Julian() {
   const [isLoading, setIsLoading] = useState(true);
-  const julianWorld = useRef();
-  function onLoad(spline) {
-    const obj = spline.findObjectByName("Front");
-    julianWorld.current = obj;
-
-    console.log(obj);
-  }
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,8 +16,7 @@ export default function Julian() {
     <Layout>
       {isLoading && <Loading />}
       <Spline
-        scene="https://prod.spline.design/aOOFORR6a2WcDOhk/scene.splinecode"
-        onLoad={onLoad}
+        scene="https://prod.spline.design/m6U7TMSFkypErn6E/scene.splinecode"
         style={{ width: "100%", height: "100vh" }}
       />
     </Layout>

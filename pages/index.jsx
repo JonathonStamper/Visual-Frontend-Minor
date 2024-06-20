@@ -22,9 +22,9 @@ export default function Home() {
         <Link href="/" className="font-bold">
           Portal Horizon.
         </Link>
-        <h1 className="text-7xl max-w-[649px]">
+        <h1 className="text-7xl max-w-[600px]">
           Welcome to our
-          <span className="ml-5 text-theme-Purple">Working space</span>
+          <span className="ml-5 text-theme-Purple">Horizon</span>
         </h1>
         <p>Made By: Joey, Julian, Bo, Jonathan</p>
       </div>

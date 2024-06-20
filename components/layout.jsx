@@ -1,19 +1,9 @@
 import Link from "next/link";
-import { Plus, Minus, HomeIcon } from "lucide-react";
-import Loading from "./Loading";
-import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { Undo2, Camera } from "lucide-react";
 
-export default function Layout({ children, data, backToLobby = true }) {
-  const handleZoomIn = () => {
-    if (data) {
-      data.current.position.z -= 3000;
-    }
-  };
-  const handleZoomOut = () => {
-    if (data) {
-      data.current.position.z += 3000;
-    }
-  };
+export default function Layout({ children }) {
+  const router = useRouter();
 
   return (
     <>
@@ -23,29 +13,15 @@ export default function Layout({ children, data, backToLobby = true }) {
             Portal Horizon.
           </Link>
           <div className="flex flex-col gap-3">
-            {data && (
-              <>
-                <button
-                  className="bg-white text-black p-3 text-xl rounded-[50%]"
-                  onClick={handleZoomIn}
-                >
-                  <Plus />
-                </button>
-                <button
-                  className="bg-white text-black p-3 text-xl rounded-[50%]"
-                  onClick={handleZoomOut}
-                >
-                  <Minus />
-                </button>
-              </>
-            )}
-            {backToLobby && (
-              <Link href="/lobby">
-                <button className="bg-white text-black p-3 text-xl rounded-[50%]">
-                  <HomeIcon />
-                </button>
-              </Link>
-            )}
+            <button
+              className="bg-white text-black p-3 text-xl rounded-[50%]"
+              onClick={() => router.back()}
+            >
+              <Undo2 />
+            </button>
+            <button className="bg-white text-black p-3 text-xl rounded-[50%]">
+              <Camera />
+            </button>
           </div>
         </div>
         {children}
