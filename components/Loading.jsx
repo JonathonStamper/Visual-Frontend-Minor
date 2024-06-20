@@ -27,7 +27,7 @@ export default function Loading() {
 
   return (
     <section className="bg-gray-800 absolute left-0 top-0 h-screen w-full flex items-center justify-center">
-      <div className="font-bold text-5xl flex gap-5">
+      <div className="font-bold text-5xl flex gap-5 text-white">
         Loading
         <div className=" flex gap-5 CharacterAnimation">
           {ImageList.map((image, index) => (

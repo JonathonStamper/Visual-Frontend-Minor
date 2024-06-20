@@ -1,50 +1,13 @@
-import Loading from "@/components/Loading";
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from 'react'
 import Spline from "@splinetool/react-spline";
-import PopUpAnimation from "@/components/PopUp";
 import Layout from "@/components/layout";
+import Loading from "@/components/Loading";
+import PopUpAnimation from '@/components/PopUp';
 
-export default function Jonathan() {
-  // const [isOpen, setIsOpen] = useState(false);
-  // const [data, setData] = useState({});
-  // const [isLoading, setIsLoading] = useState(true);
 
-  // const world = useRef();
 
-  // const onLoad = (spline) => {
-  //   const obj = spline.findObjectById("0e81df3a-2f34-4d2e-b75e-be2f80664c41");
-  //   world.current = obj;
-  //   console.log(world);
-  // };
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 3500);
-  // }, []);
-
-  // const footbalEasterEgg = {
-  //   title: "Hello world",
-  //   paragraph: "Lorum ipsum ipsum lorem looooore",
-  // };
-
-  // const Indicator = {
-  //   title: "Hello world",
-  //   paragraph: "I like turtles",
-  // };
-
-  // function onMouseDown(e) {
-  //   if (e.target.name === "TestObject") {
-  //     setData(footbalEasterEgg);
-  //     setIsOpen(true);
-  //   }
-
-  //   if (e.target.name === "Indicator") {
-  //     setData(Indicator);
-  //     setIsOpen(true);
-  //   }
-  // }
-
+export default function John() {   
+  
   const Introduction = {
     title: "Welcome to my world",
     paragraph: "Here you get to play as me and roam my island. Some items are clickable, just click and see some easter eggs. PS (WASD to move around)",
@@ -110,32 +73,20 @@ export default function Jonathan() {
     
 
 
-
   return (
-    <Layout>
-      {/* {isLoading && <Loading />}
-      <Spline
-        onLoad={onLoad}
+    <main className="flex items-center justify-center w-full h-screen ">
+
+    {isLoading && <Loading />}
+    <Spline
+        scene="https://prod.spline.design/ASgqRHR1Lvy6hCS9/scene.splinecode" 
+        // onLoad={onLoad}
         onMouseDown={onMouseDown}
         style={{ width: "100%", height: "100vh" }}
-        scene="https://prod.spline.design/3RPkFAn6qBQn67Dv/scene.splinecode"
-      />
-      {isOpen && <PopUpAnimation data={data} setIsOpen={setIsOpen} />} */}
-
-<main className="flex items-center justify-center w-full h-screen ">
-
-{isLoading && <Loading />}
-<Spline
-    scene="https://prod.spline.design/ASgqRHR1Lvy6hCS9/scene.splinecode" 
-    // onLoad={onLoad}
-    onMouseDown={onMouseDown}
-    style={{ width: "100%", height: "100vh" }}
-    />
+        />
 
 {isOpen && <PopUpAnimation data={data} setIsOpen={setIsOpen} />}
 
-
+   
 </main>
-    </Layout>
-  );
+)
 }

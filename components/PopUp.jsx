@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export default function PopUpAnimation({ data, setIsOpen }) {
   return (
     <div className="flex absolute items-center justify-center w-full  ">
-      <div className="PopUpAnimation flex flex-col gap-10 p-5 pt relative w-[400px] h-[250px] rounded-2xl">
+      <div className="PopUpAnimation flex flex-col gap-4 p-5 pt relative shadow-black shadow-2xl bg-white w-[45%] h-[350px] rounded-2xl">
         <button
           onClick={() => {
             setIsOpen(false);
@@ -13,7 +13,7 @@ export default function PopUpAnimation({ data, setIsOpen }) {
           <X />
         </button>
         <h3 className="font-bold text-2xl">{data.title}</h3>
-        <p className="font-medium text-xl">{data.paragraph}</p>
+        <p className="font-medium text-lg">{data.paragraph}</p>
       </div>
     </div>
   );

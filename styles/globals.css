@@ -499,12 +499,12 @@ animation-iteration-count: infinite;
 }
 
 .PopUpAnimation {
-  background: rgba(255, 255, 255, 0.2);
+  /* background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 15p 35px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0, 25);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5); */
 
   overflow: hidden;
   animation: PopUpAnimation;
@@ -535,3 +535,322 @@ animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
 }
+
+@keyframes sunGlowAnimation{
+  0%{
+    filter: blur(50px);
+  }
+
+  100%{
+    filter: blur(250px);
+
+  }
+}
+
+.SunGlow{
+  background: rgb(84, 18, 110);
+  animation-name: sunGlowAnimation;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes portal1{
+  0%{
+    opacity: 0%;
+    transform: translateX(-20px);
+  }
+
+
+
+  100%{
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+}
+
+
+
+@keyframes portal2{
+  0%{
+    opacity: 0%;
+    transform: translateX(20px);
+  }
+
+  
+
+  100%{
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+}
+
+.portal1{
+  position: absolute;
+  animation-name: portal1;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+
+}
+
+.portal2{
+  position: absolute;
+  animation-name: portal2;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes horizon1{
+  0%{
+    opacity: 0%;
+    transform: translateY(20px);
+  }
+
+
+  100%{
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+
+.horizon1{
+  animation-name: horizon1;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes horizon2{
+  0%{
+    opacity: 0%;
+    transform: translateY(-20px);
+  }
+
+
+  100%{
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+
+.horizon2{
+  animation-name: horizon2;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes horizon2{
+  0%{
+    opacity: 0%;
+    transform: translateY(-20px);
+  }
+
+
+  100%{
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+
+.horizon2{
+  animation-name: horizon2;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes horizon3{
+  0%{
+    opacity: 0%;
+    transform: translateY(20px);
+  }
+
+  
+
+  100%{
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+
+.horizon3{
+  animation-name: horizon3;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes ActualPortal{
+  0%{
+opacity: 0%;
+transform: scale(1);
+  } 
+   50%{
+    opacity: 70%;
+    transform: scale(1);
+
+  }
+
+  100%{
+    transform: scale(0);
+  }
+}
+
+
+
+.ActualPortal{
+  animation-name: ActualPortal;
+  animation-duration: 2.2s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
+
+@keyframes swirl{
+  0%{
+    opacity: 100%;
+    transform:  scale(1);
+
+      } 
+       100%{
+        opacity: 0%;
+        transform:  scale(0);
+
+      }
+}
+
+.swirl{
+  animation-name: swirl;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes popAnimation{
+  0%, 100%{
+    transform: scale(0);
+  }
+
+  50%{
+    transform: scale(1);
+
+  }
+}
+
+.popAnimation{
+  animation-name: popAnimation;
+  animation-duration: 0.7s;
+  animation-delay: 3.4s;
+  animation-fill-mode: both;
+}
+
+@keyframes joey{
+  0%, 100%{
+    transform: translateY(-20px);
+  }
+
+  50%{
+    transform: translateY(0px);
+
+  }
+
+}
+
+.joey{
+  animation-name: joey;
+  animation-duration: 4s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+}
+
+
+@keyframes wholeScene{
+  0%{
+    opacity: 100%;
+    z-index: 2;
+  }
+
+  100%{
+    opacity: 0%;
+    z-index: -1;
+
+  }
+}
+
+.wholeScene{
+  animation-name: wholeScene;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-fill-mode: both;
+}
+
+@keyframes john{
+  0%, 100%{
+    transform: translateX(-20px);
+  }
+
+  50%{
+    transform: translateY(0px);
+
+  }
+
+}
+
+.john{
+  animation-name: john;
+  animation-duration: 4s;
+
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0%;
+  }
+
+  100%{
+    opacity: 100%;
+
+  }
+}
+
+.fadeIn{
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes whiteOut{
+  0%{
+    width: 0%;
+    height: 0vh;
+    border-radius: 100%;
+  }
+
+  100%{
+    width: 100%;
+    height: 100vh;
+    border-radius: 0%;
+
+  }
+}
+
+.whiteOut{
+  animation-name: whiteOut;
+  animation-duration: .5s;
+  animation-delay: 3.9s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+
+

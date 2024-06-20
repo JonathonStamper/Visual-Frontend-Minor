@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Spline from "@splinetool/react-spline";
 import { useRef } from "react";
+import IntroAnimations from "@/components/IntroAnimations";
 
 export default function Home() {
   const characters = useRef();
@@ -12,7 +13,11 @@ export default function Home() {
   }
 
   return (
+    <>
+        <IntroAnimations/>
+
     <section className="flex h-screen layout">
+
       <div className="bg-theme-Black text-white  h-full layout w-full flex flex-col justify-between pt-16 pb-16 px-16 relative  bg-[url('/media/gradient.png')] bg-no-repeat bg-[top_10rem_left_10rem]">
         <Link href="/" className="font-bold">
           Portal Horizon.
@@ -29,7 +34,7 @@ export default function Home() {
             scene="https://prod.spline.design/eoDfixn1U745RWEh/scene.splinecode"
             style={{ width: "650px", height: "600px" }}
             onLoad={onLoad}
-          />
+            />
         </div>
         <Link href="/lobby">
           <button className="bg-theme-Purple text-white text-2xl font-bold p-7 rounded-lg">
@@ -38,5 +43,6 @@ export default function Home() {
         </Link>
       </div>
     </section>
+            </>
   );
 }
