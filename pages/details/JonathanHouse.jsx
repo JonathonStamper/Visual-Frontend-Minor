@@ -15,7 +15,10 @@ export default function JonathanHouse() {
     <>
       <Layout>
         {isLoading && <Loading />}
-        <Spline scene="https://prod.spline.design/p7uBVzzJUCKTNPoC/scene.splinecode" />
+        <Spline
+          scene="https://prod.spline.design/p7uBVzzJUCKTNPoC/scene.splinecode"
+          style={{ width: "100%", height: "100vh" }}
+        />
       </Layout>
     </>
   );

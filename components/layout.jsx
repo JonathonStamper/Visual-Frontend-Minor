@@ -5,10 +5,6 @@ import { Undo2, Camera } from "lucide-react";
 export default function Layout({ children }) {
   const router = useRouter();
 
-  const handleClick = () => {
-    router.back();
-  };
-
   return (
     <>
       <main className="relative">
@@ -19,7 +15,7 @@ export default function Layout({ children }) {
           <div className="flex flex-col gap-3">
             <button
               className="bg-white text-black p-3 text-xl rounded-[50%]"
-              onClick={handleClick}
+              onClick={() => router.back()}
             >
               <Undo2 />
             </button>

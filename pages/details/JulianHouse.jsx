@@ -15,7 +15,10 @@ export default function JulianHouse() {
     <>
       <Layout>
         {isLoading && <Loading />}
-        <Spline scene="https://prod.spline.design/Fkh-ipD-WSElhQyz/scene.splinecode" />
+        <Spline
+          scene="https://prod.spline.design/Fkh-ipD-WSElhQyz/scene.splinecode"
+          style={{ width: "100%", height: "100vh" }}
+        />
       </Layout>
     </>
   );

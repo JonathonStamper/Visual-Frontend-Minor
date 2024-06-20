@@ -15,7 +15,10 @@ export default function JoeyHouse() {
     <>
       <Layout>
         {isLoading && <Loading />}
-        <Spline scene="https://prod.spline.design/Llo35VmZ3SOr2gLC/scene.splinecode" />
+        <Spline
+          scene="https://prod.spline.design/Llo35VmZ3SOr2gLC/scene.splinecode"
+          style={{ width: "100%", height: "100vh" }}
+        />
       </Layout>
     </>
   );

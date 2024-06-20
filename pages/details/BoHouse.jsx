@@ -15,7 +15,10 @@ export default function BoHouse() {
     <>
       <Layout>
         {isLoading && <Loading />}
-        <Spline scene="https://prod.spline.design/Fkh-ipD-WSElhQyz/scene.splinecode" />
+        <Spline
+          scene="https://prod.spline.design/EFfS33KJAWAWQrDp/scene.splinecode"
+          style={{ width: "100%", height: "100vh" }}
+        />
       </Layout>
     </>
   );

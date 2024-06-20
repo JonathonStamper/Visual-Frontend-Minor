@@ -47,6 +47,7 @@ export default function Home() {
         onLoad={onLoad}
         style={{ width: "100%", height: "100vh" }}
       />
+
       <Dialog open={dialog}>
         <DialogContent>
           <DialogHeader>
