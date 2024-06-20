@@ -16,13 +16,11 @@ export default function Joey() {
   const [open3, setIsOpen3] = useState(false);
 
   const [isLoading, setIsLoading] = useState(true);
-  const joeyWorld = useRef();
-  function onLoad(spline) {
-    const obj = spline.findObjectByName("world");
-    joeyWorld.current = obj;
-
-    console.log(obj);
-  }
+  // const joeyWorld = useRef();
+  // function onLoad(spline) {
+  //   const obj = spline.findObjectByName("world");
+  //   joeyWorld.current = obj;
+  // }
 
   useEffect(() => {
     setTimeout(() => {
@@ -30,31 +28,29 @@ export default function Joey() {
     }, 3500);
   }, []);
 
-  function onMouseDown(e) {
-    console.log(e);
-    if (e.target.name === "Leerdoel1") {
-      setIsOpen(true);
-    }
+  // function onMouseDown(e) {
+  //   console.log(e);
+  //   if (e.target.name === "Leerdoel1") {
+  //     setIsOpen(true);
+  //   }
 
-    if (e.target.name === "Leerdoel2") {
-      setIsOpen2(true);
-    }
+  //   if (e.target.name === "Leerdoel2") {
+  //     setIsOpen2(true);
+  //   }
 
-    if (e.target.name === "Leerdoel3") {
-      setIsOpen3(true);
-    }
-  }
+  //   if (e.target.name === "Leerdoel3") {
+  //     setIsOpen3(true);
+  //   }
+  // }
 
   return (
-    <Layout data={joeyWorld}>
+    <Layout>
       {isLoading && <Loading />}
       <Spline
-        scene="https://prod.spline.design/MhDTjrqFFUi3B0wH/scene.splinecode"
-        onLoad={onLoad}
-        onMouseDown={onMouseDown}
+        scene="https://prod.spline.design/5hcWLmfEBYVljPll/scene.splinecode"
         style={{ width: "100%", height: "100vh" }}
       />
-      <Drawer open={open} onOpenChange={setIsOpen}>
+      {/* <Drawer open={open} onOpenChange={setIsOpen}>
         <DrawerContent className="max-w-[750px] ml-auto p-5">
           <DrawerTitle>Leerdoel 1</DrawerTitle>
           <DrawerDescription>
@@ -104,7 +100,7 @@ export default function Joey() {
             Phasellus felis velit, laoreet at malesuada ac, finibus non lacus.
           </DrawerDescription>
         </DrawerContent>
-      </Drawer>
+      </Drawer> */}
     </Layout>
   );
 }

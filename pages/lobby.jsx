@@ -28,8 +28,6 @@ export default function Home() {
     // Check if the user has seen the dialog before
     const hasSeenDialog = localStorage.getItem("hasSeenDialog");
 
-    console.log(hasSeenDialog);
-
     if (!hasSeenDialog) {
       // If not, show the dialog and set the flag in localStorage
       setDialog(true);

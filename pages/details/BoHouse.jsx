@@ -3,7 +3,7 @@ import Loading from "@/components/Loading";
 import { useEffect, useState } from "react";
 import Layout from "@/components/layout";
 
-export default function JoeyHouse() {
+export default function BoHouse() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -15,7 +15,7 @@ export default function JoeyHouse() {
     <>
       <Layout>
         {isLoading && <Loading />}
-        <Spline scene="https://prod.spline.design/Llo35VmZ3SOr2gLC/scene.splinecode" />
+        <Spline scene="https://prod.spline.design/Fkh-ipD-WSElhQyz/scene.splinecode" />
       </Layout>
     </>
   );
