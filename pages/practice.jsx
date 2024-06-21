@@ -114,7 +114,7 @@ export default function Home() {
       /> */}
 
 
-      <button className="buttonTest" onClick={setIsOpen(true)}>Button Transition</button> 
+      <button className="buttonTest" onClick={() => setIsOpen(true)}>Button Transition</button> 
       {isOpen && <Portfolio/>}
       </main>
      
