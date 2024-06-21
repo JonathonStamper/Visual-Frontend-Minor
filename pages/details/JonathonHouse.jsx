@@ -11,6 +11,8 @@ export default function JonathanHouse() {
     }, 3500);
   }, []);
 
+  
+
   return (
     <>
       <Layout>

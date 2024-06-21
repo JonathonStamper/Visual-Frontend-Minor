@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Portfolio({data, setIsOpen}) {
   return (
-    <div className="flex absolute right-0 items-center justify-center w-full  ">
+    <div className="flex absolute right-0 items-center justify-end w-full  ">
     <div className="PopUpAnimation flex flex-col gap-4 p-5 pt relative w-[45%] h-[350px] rounded-2xl">
       <button
         onClick={() => {

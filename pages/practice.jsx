@@ -1,11 +1,13 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import IntroAnimations from "../components/IntroAnimations";
+import Portfolio from "@/components/Portfolio";
 // import {Example} from '/Example_Image.jpg'
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false)
   const loaderList = [
     { color: "#C6A664", number: 1 },
     { color: "#909090", number: 2 },
@@ -109,8 +111,10 @@ export default function Home() {
         width={300}
         height={300}
       /> */}
-      <button className="buttonTest">Button Transition</button> 
-      
+
+
+      <button className="buttonTest" onClick={setIsOpen(true)}>Button Transition</button> 
+      {isOpen && <Portfolio/>}
       </main>
      
     </>

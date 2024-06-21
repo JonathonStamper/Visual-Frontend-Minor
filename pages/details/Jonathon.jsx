@@ -47,7 +47,7 @@ export default function Jonathan() {
 
   const Introduction = {
     title: "Welcome to my world",
-    paragraph: "Here you get to play as me and roam my island. Some items are clickable, just click and see some easter eggs. PS (WASD to move around)",
+    paragraph: "This world represents my personal love for beaches and islands. Here you get to play as me and roam my island. Some items are clickable, just click and see some easter eggs. PS (WASD to move around)",
   };
     const [isLoading, setIsLoading] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
@@ -66,13 +66,13 @@ export default function Jonathan() {
       };
 
       const Gym_sign = {
-        title: "Why is there a gym set?",
-        paragraph: "Because my free time I like to go to the gym, that's why :)",
+        title: "Why is there gym equipment here?",
+        paragraph: "Because in my free time I like to go to the gym, that's why :)",
       };
 
       const Beach_sign = {
-        title: "Here lies....",
-        paragraph: "the last teacher who gave me a bad grade...",
+        title: "Welcome...",
+        paragraph: "Go through my mario tube cave thing and you'll be able to see my room and portfolio",
       };
     
 
@@ -80,7 +80,7 @@ export default function Jonathan() {
         setTimeout(() => {
           setIsLoading(false);
           setIsOpen(true)
-        }, 1500);
+        }, 3500);
       }, []);
 
 
@@ -101,7 +101,12 @@ export default function Jonathan() {
             setIsOpen(true);
           }
 
-          if (e.target.name === "Beach_sign+") {
+          if (e.target.name === "Beach_sign") {
+            setData(Beach_sign);
+            setIsOpen(true);
+          }
+
+          if (e.target.name === "Home_Sign") {
             setData(Beach_sign);
             setIsOpen(true);
           }

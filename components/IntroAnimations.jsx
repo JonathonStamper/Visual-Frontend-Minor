@@ -11,7 +11,7 @@ export default function IntroAnimations() {
     <div className="bg-theme-Black wholeScene text-white absolute  h-screen z-20 w-full flex flex-col justify-center items-center pt-16 pb-16 px-16  overflow-hidden">
       <div className='flex flex-col justify-center items-center pt-16 pb-16 px-16 xl:max-w-[1280px]'>
       <div className='SunGlow w-[50%] h-[500px] absolute bottom-[-350px] -z-20 rounded-full'></div>
-      <div className='whiteOut  absolute z-20 bg-[#896b84] blur-2xl opacity-90 rounded-full'></div>
+      <div className='whiteOut h-screen w-full absolute z-20 bg-[#896b84] blur-2xl opacity-90 rounded-full'></div>
 
       <div className='flex justify-center items-center w-[200px] rotate-[-30deg] left fadeIn'>
         <Image className='absolute w-[150px] joey left-[-400px] bottom-[200px]  ' src={Joey} alt=''/>
