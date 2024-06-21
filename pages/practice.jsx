@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import IntroAnimations from "../components/IntroAnimations";
 import Portfolio from "@/components/Portfolio";
+import { useState } from "react";
 // import {Example} from '/Example_Image.jpg'
 
 const inter = Inter({ subsets: ["latin"] });
