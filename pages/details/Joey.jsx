@@ -1,102 +1,76 @@
 import Spline from "@splinetool/react-spline";
 import Layout from "@/components/layout";
 import { useEffect, useState } from "react";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerDescription,
-  DrawerTitle,
-} from "@/components/ui/drawer";
+import PopUpAnimation from "@/components/PopUp";
 
 import Loading from "@/components/Loading";
 
 export default function Joey() {
-  const [open, setIsOpen] = useState(false);
-  const [open2, setIsOpen2] = useState(false);
-  const [open3, setIsOpen3] = useState(false);
+  const Introduction = {
+    title: "Welcome to my world",
+    paragraph: "This world is movable and clickable ",
+  };
 
   const [isLoading, setIsLoading] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [data, setData] = useState(Introduction);
+
+  const bird1 = {
+    title: "Arcade machine",
+    paragraph: "Here you can see, my favorite game overwatch",
+  };
+
+  const Beginning_Sign = {
+    title: "Heres your firsty chanllenge",
+    paragraph:
+      "Clear this hill and collect the rupees when reaching the top. Goodluck!",
+  };
+
+  const Gym_sign = {
+    title: "Why is there gym equipment here?",
+    paragraph: "Because in my free time I like to go to the gym, that's why :)",
+  };
 
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
+      setIsOpen(true);
     }, 3500);
   }, []);
 
   function onMouseDown(e) {
-    console.log(e);
-    if (e.target.name === "Leerdoel1") {
+    if (e.target.name === "sign1") {
+      setData(bird1);
       setIsOpen(true);
     }
 
-    if (e.target.name === "Leerdoel2") {
-      setIsOpen2(true);
+    if (e.target.name === "sign2") {
+      setData(Beginning_Sign);
+      setIsOpen(true);
     }
 
-    if (e.target.name === "Leerdoel3") {
-      setIsOpen3(true);
+    if (e.target.name === "sign3") {
+      setData(Gym_sign);
+      setIsOpen(true);
+    }
+    if (e.target.name === "sign4") {
+      setData(Gym_sign);
+      setIsOpen(true);
     }
   }
 
   return (
     <Layout>
-      {isLoading && <Loading />}
-      <Spline
-        scene="https://prod.spline.design/5hcWLmfEBYVljPll/scene.splinecode"
-        style={{ width: "100%", height: "100vh" }}
-        onMouseDown={onMouseDown}
-      />
-      <Drawer open={open} onOpenChange={setIsOpen}>
-        <DrawerContent className="max-w-[750px] ml-auto p-5">
-          <DrawerTitle>Leerdoel 1</DrawerTitle>
-          <DrawerDescription>
-            Nunc ornare, tellus a iaculis condimentum, libero quam accumsan
-            massa, non egestas ligula metus eu magna. Interdum et malesuada
-            fames ac ante ipsum primis in faucibus. Fusce et metus suscipit est
-            bibendum interdum eu ut nulla. In tincidunt porttitor imperdiet.
-            Phasellus felis velit, laoreet at malesuada ac, finibus non lacus.
-            Nunc ornare, tellus a iaculis condimentum, libero quam accumsan
-            massa, non egestas ligula metus eu magna. Interdum et malesuada
-            fames ac ante ipsum primis in faucibus. Fusce et metus suscipit est
-            bibendum interdum eu ut nulla. In tincidunt porttitor imperdiet.
-            Phasellus felis velit, laoreet at malesuada ac, finibus non lacus.
-          </DrawerDescription>
-        </DrawerContent>
-      </Drawer>
-      <Drawer open={open2} onOpenChange={setIsOpen2}>
-        <DrawerContent className="max-w-[750px] ml-auto p-5">
-          <DrawerTitle>Leerdoel 2</DrawerTitle>
-          <DrawerDescription>
-            Nunc ornare, tellus a iaculis condimentum, libero quam accumsan
-            massa, non egestas ligula metus eu magna. Interdum et malesuada
-            fames ac ante ipsum primis in faucibus. Fusce et metus suscipit est
-            bibendum interdum eu ut nulla. In tincidunt porttitor imperdiet.
-            Phasellus felis velit, laoreet at malesuada ac, finibus non lacus.
-            Nunc ornare, tellus a iaculis condimentum, libero quam accumsan
-            massa, non egestas ligula metus eu magna. Interdum et malesuada
-            fames ac ante ipsum primis in faucibus. Fusce et metus suscipit est
-            bibendum interdum eu ut nulla. In tincidunt porttitor imperdiet.
-            Phasellus felis velit, laoreet at malesuada ac, finibus non lacus.
-          </DrawerDescription>
-        </DrawerContent>
-      </Drawer>
-      <Drawer open={open3} onOpenChange={setIsOpen3}>
-        <DrawerContent className="max-w-[750px] ml-auto p-5">
-          <DrawerTitle>Leerdoel 3</DrawerTitle>
-          <DrawerDescription>
-            Nunc ornare, tellus a iaculis condimentum, libero quam accumsan
-            massa, non egestas ligula metus eu magna. Interdum et malesuada
-            fames ac ante ipsum primis in faucibus. Fusce et metus suscipit est
-            bibendum interdum eu ut nulla. In tincidunt porttitor imperdiet.
-            Phasellus felis velit, laoreet at malesuada ac, finibus non lacus.
-            Nunc ornare, tellus a iaculis condimentum, libero quam accumsan
-            massa, non egestas ligula metus eu magna. Interdum et malesuada
-            fames ac ante ipsum primis in faucibus. Fusce et metus suscipit est
-            bibendum interdum eu ut nulla. In tincidunt porttitor imperdiet.
-            Phasellus felis velit, laoreet at malesuada ac, finibus non lacus.
-          </DrawerDescription>
-        </DrawerContent>
-      </Drawer>
+      <main className="flex items-center justify-center w-full h-screen">
+        {isLoading && <Loading />}
+        <Spline
+          scene="https://prod.spline.design/5hcWLmfEBYVljPll/scene.splinecode"
+          style={{ width: "100%", height: "100vh" }}
+          onMouseDown={onMouseDown}
+        />
+
+        {isOpen && <PopUpAnimation data={data} setIsOpen={setIsOpen} />}
+      </main>
     </Layout>
   );
 }

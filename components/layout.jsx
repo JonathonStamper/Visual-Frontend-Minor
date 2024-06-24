@@ -7,7 +7,7 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <main className="relative">
+      <div className="relative">
         <div className="absolute text-white w-[1440px] m-auto left-0 right-0 pt-16 flex flex-row justify-between ">
           <Link href="/" className="font-bold">
             Portal Horizon.
@@ -25,7 +25,7 @@ export default function Layout({ children }) {
           </div>
         </div>
         {children}
-      </main>
+      </div>
     </>
   );
 }

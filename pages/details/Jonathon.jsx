@@ -47,74 +47,68 @@ export default function Jonathan() {
 
   const Introduction = {
     title: "Welcome to my world",
-    paragraph: "This world represents my personal love for beaches and islands. Here you get to play as me and roam my island. Some items are clickable, just click and see some easter eggs. PS (WASD to move around)",
+    paragraph:
+      "This world represents my personal love for beaches and islands. Here you get to play as me and roam my island. Some items are clickable, just click and see some easter eggs. PS (WASD to move around)",
   };
-    const [isLoading, setIsLoading] = useState(true);
-    const [isOpen, setIsOpen] = useState(false);
-    const [data, setData] = useState(Introduction);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [data, setData] = useState(Introduction);
 
-   
-    
-      const bird1 = {
-        title: "Just a bird....",
-        paragraph: "Nothing to see here",
-      };
+  const bird1 = {
+    title: "Just a bird....",
+    paragraph: "Nothing to see here",
+  };
 
-      const Beginning_Sign = {
-        title: "Heres your firsty chanllenge",
-        paragraph: "Clear this hill and collect the rupees when reaching the top. Goodluck!",
-      };
+  const Beginning_Sign = {
+    title: "Heres your firsty chanllenge",
+    paragraph:
+      "Clear this hill and collect the rupees when reaching the top. Goodluck!",
+  };
 
-      const Gym_sign = {
-        title: "Why is there gym equipment here?",
-        paragraph: "Because in my free time I like to go to the gym, that's why :)",
-      };
+  const Gym_sign = {
+    title: "Why is there gym equipment here?",
+    paragraph: "Because in my free time I like to go to the gym, that's why :)",
+  };
 
-      const Beach_sign = {
-        title: "Welcome...",
-        paragraph: "Go through my mario tube cave thing and you'll be able to see my room and portfolio",
-      };
-    
+  const Beach_sign = {
+    title: "Welcome...",
+    paragraph:
+      "Go through my mario tube cave thing and you'll be able to see my room and portfolio",
+  };
 
-    useEffect(() => {
-        setTimeout(() => {
-          setIsLoading(false);
-          setIsOpen(true)
-        }, 3500);
-      }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+      setIsOpen(true);
+    }, 3500);
+  }, []);
 
+  function onMouseDown(e) {
+    if (e.target.name === "BirdP") {
+      setData(bird1);
+      setIsOpen(true);
+    }
 
+    if (e.target.name === "Beginning_Sign") {
+      setData(Beginning_Sign);
+      setIsOpen(true);
+    }
 
-      function onMouseDown(e) {
-        if (e.target.name === "BirdP") {
-          setData(bird1);
-          setIsOpen(true);
-        }
-    
-        if (e.target.name === "Beginning_Sign") {
-          setData(Beginning_Sign);
-          setIsOpen(true);
-        }
+    if (e.target.name === "Gym_Sign") {
+      setData(Gym_sign);
+      setIsOpen(true);
+    }
 
-        if (e.target.name === "Gym_Sign") {
-            setData(Gym_sign);
-            setIsOpen(true);
-          }
+    if (e.target.name === "Beach_sign") {
+      setData(Beach_sign);
+      setIsOpen(true);
+    }
 
-          if (e.target.name === "Beach_sign") {
-            setData(Beach_sign);
-            setIsOpen(true);
-          }
-
-          if (e.target.name === "Home_Sign") {
-            setData(Beach_sign);
-            setIsOpen(true);
-          }
-        
-      }
-    
-
-
+    if (e.target.name === "Home_Sign") {
+      setData(Beach_sign);
+      setIsOpen(true);
+    }
+  }
 
   return (
     <Layout>
@@ -127,20 +121,17 @@ export default function Jonathan() {
       />
       {isOpen && <PopUpAnimation data={data} setIsOpen={setIsOpen} />} */}
 
-<main className="flex items-center justify-center w-full h-screen ">
+      <main className="flex items-center justify-center w-full h-screen ">
+        {isLoading && <Loading />}
+        <Spline
+          scene="https://prod.spline.design/ASgqRHR1Lvy6hCS9/scene.splinecode"
+          // onLoad={onLoad}
+          onMouseDown={onMouseDown}
+          style={{ width: "100%", height: "100vh" }}
+        />
 
-{isLoading && <Loading />}
-<Spline
-    scene="https://prod.spline.design/ASgqRHR1Lvy6hCS9/scene.splinecode" 
-    // onLoad={onLoad}
-    onMouseDown={onMouseDown}
-    style={{ width: "100%", height: "100vh" }}
-    />
-
-{isOpen && <PopUpAnimation data={data} setIsOpen={setIsOpen} />}
-
-
-</main>
+        {isOpen && <PopUpAnimation data={data} setIsOpen={setIsOpen} />}
+      </main>
     </Layout>
   );
 }
