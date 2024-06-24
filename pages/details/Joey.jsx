@@ -68,7 +68,6 @@ export default function Joey() {
           style={{ width: "100%", height: "100vh" }}
           onMouseDown={onMouseDown}
         />
-
         {isOpen && <PopUpAnimation data={data} setIsOpen={setIsOpen} />}
       </main>
     </Layout>
