@@ -19,17 +19,6 @@ export default function Bo() {
     paragraph: "Here you can see, my favorite game overwatch",
   };
 
-  const Beginning_Sign = {
-    title: "Heres your firsty chanllenge",
-    paragraph:
-      "Clear this hill and collect the rupees when reaching the top. Goodluck!",
-  };
-
-  const Gym_sign = {
-    title: "Why is there gym equipment here?",
-    paragraph: "Because in my free time I like to go to the gym, that's why :)",
-  };
-
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -44,16 +33,7 @@ export default function Bo() {
     }
 
     if (e.target.name === "sign2") {
-      setData(Beginning_Sign);
-      setIsOpen(true);
-    }
-
-    if (e.target.name === "sign3") {
-      setData(Gym_sign);
-      setIsOpen(true);
-    }
-    if (e.target.name === "sign4") {
-      setData(Gym_sign);
+      setData(bird1);
       setIsOpen(true);
     }
   }

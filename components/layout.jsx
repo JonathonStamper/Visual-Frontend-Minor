@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Undo2, Camera } from "lucide-react";
+import { Undo2 } from "lucide-react";
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -18,9 +18,6 @@ export default function Layout({ children }) {
               onClick={() => router.back()}
             >
               <Undo2 />
-            </button>
-            <button className="bg-white text-black p-3 text-xl rounded-[50%]">
-              <Camera />
             </button>
           </div>
         </div>
