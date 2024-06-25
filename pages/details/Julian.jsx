@@ -6,28 +6,31 @@ import Loading from "@/components/Loading";
 
 export default function Julian() {
   const Introduction = {
-    title: "Welcome to my world",
-    paragraph: "This world is movable and clickable ",
+    title: "Julian’s world",
+    paragraph:
+      "Help! Er is een zombie-uitbraak in de King Arena! Baan je een weg door de zombies en zoek snel een schuilplaats!",
   };
 
   const [isLoading, setIsLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState(Introduction);
 
-  const bird1 = {
-    title: "Arcade machine",
-    paragraph: "Here you can see, my favorite game overwatch",
-  };
-
-  const Beginning_Sign = {
-    title: "Heres your firsty chanllenge",
+  const bord1 = {
+    title: "Bord1",
     paragraph:
-      "Clear this hill and collect the rupees when reaching the top. Goodluck!",
+      "Ik ben enorm fan van horror over het algemeen, maar The Walking Dead is zonder twijfel mijn favoriete TV-serie!",
   };
 
-  const Gym_sign = {
-    title: "Why is there gym equipment here?",
-    paragraph: "Because in my free time I like to go to the gym, that's why :)",
+  const bord2 = {
+    title: "Bord2",
+    paragraph:
+      "Zoals je ziet staat het getal “371” op het scorebord. Dit is natuurlijk niet zomaar, want als enorm grote voetbalfan zit ik inmiddels op dit aantal voetbalwedstrijden. Of het nou bij mijn favoriete club Feyenoord is of in Duitsland, ik hoop in elk voetbalstadion te zijn geweest!",
+  };
+
+  const bord3 = {
+    title: "Bord3",
+    paragraph:
+      "Het kroontje staat voor de naam van het stadion, ofwel de “King Arena”. Ook dit is niet zomaar, want ik ben geboren op koningsdag!",
   };
 
   useEffect(() => {
@@ -39,21 +42,17 @@ export default function Julian() {
 
   function onMouseDown(e) {
     if (e.target.name === "sign1") {
-      setData(bird1);
+      setData(bord1);
       setIsOpen(true);
     }
 
     if (e.target.name === "sign2") {
-      setData(Beginning_Sign);
+      setData(bord2);
       setIsOpen(true);
     }
 
-    if (e.target.name === "sign3") {
-      setData(Gym_sign);
-      setIsOpen(true);
-    }
     if (e.target.name === "sign4") {
-      setData(Gym_sign);
+      setData(bord3);
       setIsOpen(true);
     }
   }
