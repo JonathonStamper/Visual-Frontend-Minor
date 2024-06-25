@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Undo2, Camera } from "lucide-react";
+import { Undo2 } from "lucide-react";
 
 export default function Layout({ children }) {
   const router = useRouter();
 
   return (
     <>
-      <main className="relative">
+      <div className="relative">
         <div className="absolute text-white w-[1440px] m-auto left-0 right-0 pt-16 flex flex-row justify-between ">
           <Link href="/" className="font-bold">
             Portal Horizon.
@@ -19,13 +19,10 @@ export default function Layout({ children }) {
             >
               <Undo2 />
             </button>
-            <button className="bg-white text-black p-3 text-xl rounded-[50%]">
-              <Camera />
-            </button>
           </div>
         </div>
         {children}
-      </main>
+      </div>
     </>
   );
 }

@@ -2,16 +2,17 @@ import { useRef, useState, useEffect } from "react";
 import Spline from "@splinetool/react-spline";
 import Layout from "@/components/layout";
 import Loading from "@/components/Loading";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import PopUpAnimation from "@/components/PopUp";
 
 export default function Home() {
-  const [dialog, setDialog] = useState(false);
+  const Introduction = {
+    title: "Introduction",
+    paragraph: `Welcome to Portal World! Click on each portal to discover our
+    personal world and find our learning goals/achievements`,
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [data, setData] = useState(Introduction);
   const [isLoading, setIsLoading] = useState(true);
   const door = useRef();
 
@@ -23,50 +24,21 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
+      setIsOpen(true);
     }, 3500);
-
-    // Check if the user has seen the dialog before
-    const hasSeenDialog = localStorage.getItem("hasSeenDialog");
-
-    if (!hasSeenDialog) {
-      // If not, show the dialog and set the flag in localStorage
-      setDialog(true);
-      localStorage.setItem("hasSeenDialog", "true");
-    }
   }, []);
-
-  const closeDialog = () => {
-    setDialog(false);
-  };
 
   return (
     <Layout data={door} backToLobby={false}>
-      {isLoading && <Loading />}
-      <Spline
-        scene="https://prod.spline.design/t8-IY41IMWdxlrWr/scene.splinecode"
-        onLoad={onLoad}
-        style={{ width: "100%", height: "100vh" }}
-      />
-
-      <Dialog open={dialog}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle className="font-barlow mb-4 text-3xl">
-              Introduction
-            </DialogTitle>
-            <DialogDescription className="font-montserrat text-xl">
-              Welcome to Portal World! Click on each portal to discover our
-              personal world and find our learning goals/achievements
-            </DialogDescription>
-          </DialogHeader>
-          <button
-            className="bg-theme-Purple text-white max-w-[175px] ml-auto py-2 px-3 rounded-md mt-10"
-            onClick={closeDialog}
-          >
-            Continue exploring
-          </button>
-        </DialogContent>
-      </Dialog>
+      <main className="flex items-center justify-center w-full h-screen">
+        {isLoading && <Loading />}
+        <Spline
+          scene="https://prod.spline.design/t8-IY41IMWdxlrWr/scene.splinecode"
+          onLoad={onLoad}
+          style={{ width: "100%", height: "100vh" }}
+        />
+        {isOpen && <PopUpAnimation data={data} setIsOpen={setIsOpen} />}
+      </main>
     </Layout>
   );
 }
