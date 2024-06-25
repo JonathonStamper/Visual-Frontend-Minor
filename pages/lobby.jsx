@@ -16,11 +16,6 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const door = useRef();
 
-  function onLoad(spline) {
-    const obj = spline.findObjectByName("Doors");
-    door.current = obj;
-  }
-
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -33,8 +28,7 @@ export default function Home() {
       <main className="flex items-center justify-center w-full h-screen">
         {isLoading && <Loading />}
         <Spline
-          scene="https://prod.spline.design/t8-IY41IMWdxlrWr/scene.splinecode"
-          onLoad={onLoad}
+          scene="https://prod.spline.design/pnfpgi4e72t5FpEk/scene.splinecode"
           style={{ width: "100%", height: "100vh" }}
         />
         {isOpen && <PopUpAnimation data={data} setIsOpen={setIsOpen} />}

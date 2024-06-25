@@ -8,7 +8,7 @@ import Loading from "@/components/Loading";
 export default function Joey() {
   const [isLoading, setIsLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
-  const [data, setData] = useState();
+  const [data, setData] = useState({});
 
   const bord1 = {
     title: "Bord1",
