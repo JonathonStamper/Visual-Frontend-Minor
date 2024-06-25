@@ -6,9 +6,15 @@ import PopUpAnimation from "@/components/PopUp";
 import Loading from "@/components/Loading";
 
 export default function Joey() {
+  const Introduction = {
+    title: "Joeys’s world",
+    paragraph:
+      "Welkom in mijn Nintendo Arena! In deze wereld ontdek je mijn passies! Verzamel de munten en ontdek van alles over mij door op de borden te klikken!",
+  };
+
   const [isLoading, setIsLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
-  const [data, setData] = useState({});
+  const [data, setData] = useState(Introduction);
 
   const bord1 = {
     title: "Bord1",
