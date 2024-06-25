@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Portfolio({data, setIsOpen}) {
   return (
-    <div className="flex absolute right-0 items-center justify-end w-full  ">
-    <div className="PopUpAnimation flex flex-col gap-4 p-5 pt relative w-[45%] h-[350px] rounded-2xl">
+    <div className="flex absolute h-screen top-0 right-0 items-center justify-end w-full py-10 mx-12 overflow-hidden">
+    <div className="PopUpAnimation text-black shadow-black shadow-2xl bg-white flex flex-col relative gap-4 p-5 pt  w-[50%] h-full rounded-2xl overflow-y-scroll">
       <button
         onClick={() => {
           setIsOpen(false);
@@ -12,7 +12,8 @@ export default function Portfolio({data, setIsOpen}) {
       >
         <X />
       </button>
-      <div className="font-bold text-2xl">{data.content}</div>
+      <div className="font-bold text-2xl">{data.title}</div>
+      <p className="">{data.content}</p>
     </div>
   </div>
 );

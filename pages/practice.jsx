@@ -2,19 +2,31 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import IntroAnimations from "../components/IntroAnimations";
 import Portfolio from "@/components/Portfolio";
-import { useState } from "react";
+import { use, useEffect, useState } from "react";
 // import {Example} from '/Example_Image.jpg'
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
+  const [data, setData] = useState({})  
   const loaderList = [
     { color: "#C6A664", number: 1 },
     { color: "#909090", number: 2 },
     { color: "#20603D", number: 3 },
     { color: "#49678D", number: 4 },
   ];
+
+  const example = {
+    title: 'Portfolio 1',
+    content: <div>
+      <h1 className="text-[34px]">hello world</h1>
+    </div>
+  }
+
+  useEffect(()=>{
+    setData(example)
+  }, [])
 
   return (
     <>
@@ -115,8 +127,9 @@ export default function Home() {
 
 
       <button className="buttonTest" onClick={() => setIsOpen(true)}>Button Transition</button> 
-      {isOpen && <Portfolio/>}
+      {isOpen && <Portfolio setIsOpen={setIsOpen} data={data}/>}
       </main>
+      
      
     </>
     
