@@ -44,36 +44,37 @@ export default function Jonathan() {
   //     setIsOpen(true);
   //   }
   // }
+  //"This world represents my personal love for beaches and islands. Here you get to play as me and roam my island. Some items are clickable, just click and see some easter eggs. PS (WASD to move around)
 
   const Introduction = {
     title: "Welcome to my world",
     paragraph:
-      "This world represents my personal love for beaches and islands. Here you get to play as me and roam my island. Some items are clickable, just click and see some easter eggs. PS (WASD to move around)",
+      "Deze wereld representeert mijn persoonlijke liefde voor stranden en eilanden. Hier kun je als mij spelen en over mijn eiland zwerven. Sommige voorwerpen kun je aanklikken, klik erop en je ziet een aantal easter eggs. PS (WASD om te bewegen)",
   };
   const [isLoading, setIsLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState(Introduction);
 
   const bird1 = {
-    title: "Just a bird....",
-    paragraph: "Nothing to see here",
+    title: "Gewoon een vogel....",
+    paragraph: "Er is hier niets te zien",
   };
 
   const Beginning_Sign = {
-    title: "Heres your firsty chanllenge",
+    title: "Hier is je eerste uitdaging",
     paragraph:
-      "Clear this hill and collect the rupees when reaching the top. Goodluck!",
+      "Ga deze heuvel af en verzamel de roepies als je de top bereikt. Succes!",
   };
 
   const Gym_sign = {
-    title: "Why is there gym equipment here?",
-    paragraph: "Because in my free time I like to go to the gym, that's why :)",
+    title: "Waarom staan hier fitnessapparaten?",
+    paragraph: "Omdat ik in mijn vrije tijd graag naar de sportschool ga, daarom :)",
   };
 
   const Beach_sign = {
-    title: "Welcome...",
+    title: "Welkom...",
     paragraph:
-      "Go through my mario tube cave thing and you'll be able to see my room and portfolio",
+      "Ga door mijn mario tube en je kunt mijn kamer en portfolios zien.",
   };
 
   useEffect(() => {

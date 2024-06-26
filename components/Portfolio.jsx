@@ -12,7 +12,7 @@ export default function Portfolio({data, setIsOpen}) {
       >
         <X />
       </button>
-      <div className="font-bold text-2xl">{data.title}</div>
+      <div className="font-bold text-5xl">{data.title}</div>
       <div className="">{data.content}</div>
     </div>
   </div>
