@@ -137,12 +137,12 @@ export default function BoHouse() {
       setIsOpen(true);
     }
 
-    if (e.target.name === "Screen") {
+    if (e.target.name === "Blender") {
       setData(leerdoel2);
       setIsOpen(true);
     }
 
-    if (e.target.name === "Design") {
+    if (e.target.name === "Designing") {
       setData(leerdoel3);
       setIsOpen(true);
     }
