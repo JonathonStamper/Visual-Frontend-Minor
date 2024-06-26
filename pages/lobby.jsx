@@ -6,9 +6,9 @@ import PopUpAnimation from "@/components/PopUp";
 
 export default function Home() {
   const Introduction = {
-    title: "Introduction",
-    paragraph: `Welcome to Portal World! Click on each portal to discover our
-    personal world and find our learning goals/achievements`,
+    title: "Introductie",
+    paragraph: `Welkom bij onze website: Portal Horizon! In deze website ontdek je naast ons portfolio óok onze eigen werelden! Wanneer je op een portal klikt, begin je in de droomwereld van de persoon die hierachter zit. Vind hier de easter eggs en leer weer wat meer over de persoon! Na een kleine challenge, vind je de mario-buis die leidt naar de working space van de persoon. Hier vind je de verschillende portfolio items, waar je van alles over onze eerste drie blokken kan lezen!
+    Klik op een portal om verder te gaan!`,
   };
 
   const [isOpen, setIsOpen] = useState(false);
