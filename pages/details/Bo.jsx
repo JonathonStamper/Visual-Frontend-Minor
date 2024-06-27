@@ -3,8 +3,10 @@ import Layout from "@/components/layout";
 import { useState, useEffect } from "react";
 import Loading from "@/components/Loading";
 import PopUpAnimation from "@/components/PopUp";
+import { useRouter } from "next/router";
 
 export default function Bo() {
+  const router = useRouter();
   const Introduction = {
     title: "Bo’s world",
     paragraph:
@@ -42,6 +44,10 @@ export default function Bo() {
     if (e.target.name === "sign2") {
       setData(sign2);
       setIsOpen(true);
+    }
+
+    if (e.target.name === "sign3") {
+      router.push("/details/BoHouse");
     }
   }
 
