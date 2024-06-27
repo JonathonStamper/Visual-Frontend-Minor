@@ -16,13 +16,12 @@ export default function Bo() {
   const [data, setData] = useState(Introduction);
 
   const sign1 = {
-    title: "Bord1",
-    paragraph: `Op het podium zie je een drumstel. Ik speel veel verschillende instrumenten, maar drummen vind ik veruit het leukste om te doen!
-    Bord 2: Hier zie je een hockeystick. Ik vind hockey namelijk de leukste sport om te doen! Ik heb in het verleden een paar jaar lang gehockeyd bij HDM, waar ik in hoge teams heb mogen spelen`,
+    title: "Bord 1:",
+    paragraph: `Op het podium zie je een drumstel. Ik speel veel verschillende instrumenten, maar drummen vind ik veruit het leukste om te doen!,`,
   };
 
   const sign2 = {
-    title: "Bord2",
+    title: "Bord 2:",
     paragraph:
       "Hier zie je een hockeystick. Ik vind hockey namelijk de leukste sport om te doen! Ik heb in het verleden een paar jaar lang gehockeyd bij HDM, waar ik in hoge teams heb mogen spelen",
   };
