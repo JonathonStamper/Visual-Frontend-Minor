@@ -92,7 +92,7 @@ export default function JonathanHouse() {
 
   const leerdoel3 = {
     title:
-      "Leerdoel: Een nieuw CMS-systeem implamenteren in een ThreeJS website:",
+      "Leerdoel: Een nieuw CMS-systeem implementeren in een ThreeJS website:",
     content: (
       <div className="flex flex-col gap-5">
         <div>
