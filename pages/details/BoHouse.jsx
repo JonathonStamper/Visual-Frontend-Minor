@@ -15,7 +15,7 @@ export default function BoHouse() {
   }, []);
 
   const leerdoel1 = {
-    title: "Leerdoel: Het masteren en verdiepen in Figma",
+    title: "Leerdoel: Het leren coderen met Javascript:",
     content: (
       <div className="flex flex-col gap-10 ">
         <div>
@@ -23,38 +23,41 @@ export default function BoHouse() {
             Waarom dit leerdoel en wat wil ik maken?
           </h2>
           <div className="text-lg">
-            In blok 1 heb ik mij verdiept in Figma door geavanceerde technieken
-            te leren. Ik heb hiervoor gekozen omdat ik sneller websites wil
-            leren maken. In dit blok wilde ik graag leren over speciale tools
-            als auto lay-out, variabelen en componenten. Uiteindelijk hoopte ik
-            een nieuw dashboard voor marineschepen te ontwerpen voor het bedrijf
-            van mijn vader (Radio Holland), aangezien deze nog niet goed werkte.
+            Voor dit blok heb ik als leerdoel gekozen om Javascript te leren. Ik
+            werk als designer, maar ik vind coderen ook erg leuk! Ik zou later
+            dan ook graag React en Next.js wil leren en Javascript is de basis
+            deze frameworks. Het zou me dus enorm helpen om meer kennis te
+            krijgen en meer technieken te leren. Mijn uiteindelijke deliverable
+            is een weather app. Deze app zou ik coderen met de hulp van een API.
+            Het gaat dus echt diep op de stof in!
           </div>
         </div>
 
         <div>
-          <h2 className="text-4xl">De vaart naar mijn eindproduct!</h2>
+          <h2 className="text-4xl">Zo codeerde ik me naar mijn eindproduct!</h2>
           <div className="text-lg">
-            Om tot het mooiste eindresultaat te komen, besloot ik met wat
-            onderzoek. Ik liet me inspireren door de Apple Vision UI, maar ik
-            wilde het natuurlijk niet zo overnemen. Ik heb dus een masterclass
-            bekeken waarin alles over de geavanceerde tools werd uitgelegd. Met
-            de hulp hiervan merkte ik dat het design proces een stuk sneller en
-            efficiënter ging. Zie hieronder het resultaat!
+            Dit blok bestond uit twee onderdelen: Een cursus op CodeCademy en
+            het coderen zelf. Door de cursus kon ik stap voor stap de codetaal
+            onder de knie krijgen. Na deze cursus begon ik aan mijn deliverable:
+            De Weather app. Het coderen van deze app was de perfecte manier om
+            mijn theorie in de praktijk toe te passen. Ik leerde over de basis
+            én over hoe ik API’s kon gebruiken om gegevens dynamisch te maken.
+            Dit blok heeft mij erg veel technische kennis gegeven. Zie hieronder
+            het eindresultaat!
           </div>
         </div>
-
+        {/* 
         <div>
           <h2 className="text-4xl">Mijn resultaat</h2>
 
           <img src="/media/blok1_joey.png" alt="Leerdoel image" />
-        </div>
+        </div> */}
       </div>
     ),
   };
 
   const leerdoel3 = {
-    title: "Leerdoel: Het leren van web animaties en Prismic:",
+    title: "Leerdoel: Het leren ontwerpen van een design system:",
     content: (
       <div className="flex flex-col gap-5">
         <div>
@@ -62,41 +65,46 @@ export default function BoHouse() {
             Waarom dit leerdoel en wat wil ik maken?
           </h2>
           <div className="text-lg">
-            Waar ik in blok 1 ging voor design, koos ik nu voor een bekender
-            gebied: development. Als web developer ben ik al ervaren, maar het
-            kan altijd beter! Typescript wordt veel gebruikt bij grote bedrijven
-            en trekt me daarom aan. Verder wil ik Next.js leren omdat er elke
-            drie maanden een nieuwe versie van komt. Ook vind ik het erg
-            interessant, dus dit was voor mij dé kans om Typescript en Next.js
-            te kunnen combineren. Als deliverable ben ik voor een website over
-            films en series gegaan. Door Next.js hoopte ik deze website een hoop
-            functies te geven!
+            In blok 1 heb ik gekozen voor het leren ontwerpen van een design
+            system. Zelf werk ik bij een agency als designer dus ik had al de
+            nodige kennis. Toch is er ruimte voor verbetering, dus ik besloot
+            dat ik me op dit gebied nog wat wilde ontwikkelen! Het ontwerpen van
+            een design system is erg belangrijk voor het creëren van consistente
+            en efficiënte gebruikerservaringen, dus ik wilde me hier verder in
+            verdiepen! Als deliverable ben ik voor een design system voor Airbnb
+            gegaan. Ik heb hiervoor gekozen omdat dit veel bouwstenen bevatte
+            voor het design system. Het was dus het perfecte voorbeeld om
+            hiervoor te gebruiken!
           </div>
         </div>
         <div>
-          <h2 className="text-4xl my-3">Het combineren van twee leerdoelen!</h2>
+          <h2 className="text-4xl my-3">
+            Hoe ik mijn design kennis nog meer uitbreidde
+          </h2>
           <div className="text-lg">
-            Ik heb mijn leerdoel gehaald op twee manieren: Ik heb tutorials
-            bekeken op YouTube, maar ook de documentatie van Typescript. De
-            tutorials zijn vaak wat oppervlakkig en in de documentatie wordt er
-            wat verder op in gegaan. Om tot mijn eindproduct te komen, heb ik
-            veel geëxperimenteerd in de code editor. Door zelf te proberen, merk
-            ik dat het proces sneller ging en ik veel leerde. Benieuwd naar mijn
-            eindproduct? Zie hieronder het resultaat!
+            Om mijn leerdoel te halen, heb ik veel methoden gebruikt. Één van de
+            belangrijkste bronnen binnen dit proces was YouTube. Ik heb veel
+            video’s bekeken die uitleg gaven over hoe ik het ontwerpen van een
+            design system het beste aan kon pakken. Voor het praktische gedeelte
+            van mijn leerproces heb ik Figma gebruikt. Binnen Figma heb ik
+            gewerkt aan onder andere kleuren, typografie, componenten en de
+            bijbehorende tokens en variabelen. Deze manier van werken zorgde
+            ervoor dat ik mijn geleerde theorie goed toe heb kunnen passen. Zie
+            hieronder het eindresultaat!
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <h2 className="text-4xl my-3">Mijn resultaat</h2>
 
           <img src="/media/blok2_joey.png" alt="Leerdoel image" />
-        </div>
+        </div> */}
       </div>
     ),
   };
 
   const leerdoel2 = {
-    title: "Leerdoel: Het leren van Typescript en Next.js:",
+    title: "Leerdoel: Het leren van Blender:",
     content: (
       <div className="flex flex-col gap-5">
         <div>
@@ -104,29 +112,35 @@ export default function BoHouse() {
             Waarom dit leerdoel en wat wil ik maken?
           </h2>
           <div className="text-lg">
-            Ook in dit blok koos ik voor twee leerdoelen: Web animaties en
-            Prismic, een database voor het bouwen van de backend. Mijn doel was
-            om mijn filmwebsite uit blok 2 verder uit te bouwen. In mijn
-            deliverable wilde ik een introanimatie maken, waar ik gebruik wilde
-            maken van scrollen. Daarnaast wilde ik een nieuwe, veiligere
-            inlogmethode (doormiddel van een passkey) implementeren.
+            In blok 3 ben ik afgestapt van design en development. Ik heb
+            namelijk gekozen voor het leren van Blender! Ik ben altijd al
+            gefascineerd geweest door visuele effecten en 3D-kunst. Nu krijg ik
+            de kans om mijn kennis te verbeteren, dus deze kans grijp ik nu! Op
+            deze manier hoop ik dan ik mijn creativiteit op dit gebied nog meer
+            kan verkennen en ontwikkelen. Omdat ik meerdere aspecten wil leren
+            (modellering, texturering, belichting en renderen), besloot ik als
+            deliverable die al deze aspecten bevat. Mijn uiteindelijke
+            deliverable wordt een 3D-isometrisch gebouw in cyberpunk-stijl, dus
+            met neon-vibes!
           </div>
         </div>
 
-        <h2 className="text-4xl my-3">Tijd voor actie!</h2>
+        <h2 className="text-4xl my-3">Het modelleren van mijn deliverable</h2>
         <div className="text-lg">
-          Om dit leerdoel te halen, heb ik een cursus voor framer-motion
-          gevolgd. Dankzij deze cursus heb ik een mooie intro animatie
-          ontwikkeld. Ook heb ik de documentatie doorgelezen, waardoor ik toch
-          nog wat dieper op de leerdoelen in ging. Uiteindelijk heb ik ook de
-          nieuwe manier van inloggen in de website gezet, waardoor deze nu een
-          stuk veiliger en professioneler is geworden! Zie hieronder het
-          eindresultaat!
+          Ik heb gedurende mijn proces een sterke aanpak gevolgd. Ik begon met
+          tutorials om de basiskennis van Blender te krijgen. Met de hulp
+          hiervan, leerde ik over de interface en de sneltoetsen, wat mijn
+          efficiëntie in het vervolg enorm heeft verbeterd! Tijdens het creëren
+          van mijn deliverable, heb ik hier erg veel aan gehad. Ik begon met het
+          modelleren van het gebouw, waarin ik de kennis uit de tutorials goed
+          gebruikt heb. In de laatste week heb ik mij geconcentreerd op de
+          belichting en texturering, waardoor ik de scene tot leven heb gebracht
+          tot het volgende resultaat!
         </div>
 
-        <h2 className="text-4xl my-3">Mijn resultaat</h2>
+        {/* <h2 className="text-4xl my-3">Mijn resultaat</h2>
 
-        <img src="/media/blok2_joey.png" alt="Leerdoel image" />
+        <img src="/media/blok2_joey.png" alt="Leerdoel image" /> */}
       </div>
     ),
   };
@@ -150,16 +164,15 @@ export default function BoHouse() {
   return (
     <>
       <Layout>
-      <main className="flex items-center justify-center w-full h-screen">
-
-        {isLoading && <Loading />}
-        <Spline
-        scene="https://prod.spline.design/EFfS33KJAWAWQrDp/scene.splinecode" 
-        style={{ width: "100%", height: "100vh" }}
-        onMouseDown={onMouseDown}
-        />
-        {isOpen && <Portfolio data={data} setIsOpen={setIsOpen} />}
-      </main>
+        <main className="flex items-center justify-center w-full h-screen">
+          {isLoading && <Loading />}
+          <Spline
+            scene="https://prod.spline.design/EFfS33KJAWAWQrDp/scene.splinecode"
+            style={{ width: "100%", height: "100vh" }}
+            onMouseDown={onMouseDown}
+          />
+          {isOpen && <Portfolio data={data} setIsOpen={setIsOpen} />}
+        </main>
       </Layout>
     </>
   );
