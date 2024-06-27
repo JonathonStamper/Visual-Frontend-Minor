@@ -33,7 +33,7 @@ export default function JulianHouse() {
             het is als web developer zeer essentieel! Als groundhopper ga ik
             veel naar voetbalwedstrijden toe. Ik koop vaak de tickets en weet
             hoe frustrerend dit kan zijn. Daarom besloot ik met{" "}
-            <Link href="http://Estad.io" className="text-blue-600">
+            <Link href="https://estadio.netlify.app/" className="text-blue-600">
               Estad.io
             </Link>{" "}
             een website te ontwikkelen die anderen hiermee kan helpen.
@@ -80,7 +80,13 @@ export default function JulianHouse() {
             Schrijven, coderen en voetbal. Ik besloot een blogwebsite te maken,
             die automatisch zou updaten wanneer ik een JSON-bestand aan zou
             passen. Deze website maakte ik in de hoop om deze te blijven
-            gebruiken.
+            gebruiken.{" "}
+            <Link
+              href="https://goalgalore.netlify.app/"
+              className="text-blue-600"
+            >
+              React website
+            </Link>{" "}
           </div>
         </div>
         <div>
@@ -128,7 +134,13 @@ export default function JulianHouse() {
             basis van Figma onder de knie te krijgen. Mijn specifieke doel was
             om een website te ontwerpen voor het fictieve bedrijf{" "}
             {'"Deepblue Discoveries"'}, dat zich richt op de oceaan, een
-            onderwerp dat ik ook erg leuk vind!
+            onderwerp dat ik ook erg leuk vind!{" "}
+            <Link
+              href="https://www.figma.com/proto/bxZGYoKROBKE6fpuIedmFJ/Deepblue-Discoveries-Deliverable?page-id=0%3A1&node-id=6-4773&viewport=526%2C365%2C0.14&t=Sr6DMHLzBz2TRQ4R-1&scaling=min-zoom"
+              className="text-blue-600"
+            >
+              Figma Design
+            </Link>{" "}
           </div>
         </div>
 

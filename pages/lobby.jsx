@@ -20,7 +20,7 @@ export default function Home() {
     setTimeout(() => {
       setIsLoading(false);
       setIsOpen(true);
-    }, 3500);
+    }, 2500);
   }, []);
 
   return (

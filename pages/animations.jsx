@@ -19,7 +19,7 @@ export default function Animations() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 3500);
+    }, 2500);
   }, []);
 
   const footbalEasterEgg = {
