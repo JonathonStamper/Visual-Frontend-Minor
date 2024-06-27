@@ -16,13 +16,13 @@ export default function Julian() {
   const [data, setData] = useState(Introduction);
 
   const bord1 = {
-    title: "Bord 1:",
+    title: "Horror:",
     paragraph:
       "Ik ben enorm fan van horror over het algemeen, maar The Walking Dead is zonder twijfel mijn favoriete TV-serie!",
   };
 
   const bord2 = {
-    title: "Bord 2:",
+    title: "Stadion:",
     paragraph:
       "Zoals je ziet staat het getal “371” op het scorebord. Dit is natuurlijk niet zomaar, want als enorm grote voetbalfan zit ik inmiddels op dit aantal voetbalwedstrijden. Of het nou bij mijn favoriete club Feyenoord is of in Duitsland, ik hoop in elk voetbalstadion te zijn geweest!",
   };

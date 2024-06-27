@@ -17,25 +17,25 @@ export default function Joey() {
   const [data, setData] = useState(Introduction);
 
   const bord1 = {
-    title: "Bord 1:",
+    title: "Arcade machine:",
     paragraph:
       "Dit is een arcade machine. Als je goed kijkt, zie je op het scherm mijn favoriete spel: Overwatch. Dit spel speel ik al drie jaar en ik ben nog zeker niet uitgespeeld",
   };
 
   const bord2 = {
-    title: "Bord 2:",
+    title: "Gym:",
     paragraph:
       "Zoals je ziet, liggen er hier sportspullen. Ik ben namelijk veel in de sportschool te vinden! Ik ga zo’n 2 keer per week naar de sportschool en daarnaast loop ik regelmatig hard. ",
   };
 
   const bord3 = {
-    title: "Bord 3:",
+    title: "Laptop:",
     paragraph:
       "Dit is mijn laptop. Buiten dat ik werk als web developer, houd ik mij in mijn vrije tijd ook bezig met het experimenteren met mijn code.",
   };
 
   const bord4 = {
-    title: "Bord 4:",
+    title: "Borussia Dortmund:",
     paragraph:
       "Een andere passie die ik heb, is voetbal. Mijn favoriete voetbalclub is Borussia Dortmund. Dit is een club in Duitsland en ik ga er ongeveer 3 keer per jaar naartoe.",
   };
