@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Undo2 } from "lucide-react";
+import { Undo2, DoorClosed } from "lucide-react";
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -19,6 +19,12 @@ export default function Layout({ children }) {
             >
               <Undo2 />
             </button>
+            <Link
+              className="bg-white text-black p-3 text-xl rounded-[50%]"
+              href="/lobby"
+            >
+              <DoorClosed />
+            </Link>
           </div>
         </div>
         {children}

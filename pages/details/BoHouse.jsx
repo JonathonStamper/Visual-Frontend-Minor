@@ -11,9 +11,8 @@ export default function BoHouse() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 3500);
+    }, 2500);
   }, []);
-
   const leerdoel1 = {
     title: "Leerdoel: Het leren coderen met Javascript:",
     content: (

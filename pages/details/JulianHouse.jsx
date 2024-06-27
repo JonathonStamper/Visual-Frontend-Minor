@@ -14,7 +14,7 @@ export default function JulianHouse() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 3500);
+    }, 2500);
   }, []);
 
   const leerdoel1 = {

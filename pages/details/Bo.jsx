@@ -31,7 +31,7 @@ export default function Bo() {
     setTimeout(() => {
       setIsLoading(false);
       setIsOpen(true);
-    }, 3500);
+    }, 2500);
   }, []);
 
   function onMouseDown(e) {

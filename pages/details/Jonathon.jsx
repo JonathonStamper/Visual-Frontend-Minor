@@ -68,7 +68,8 @@ export default function Jonathan() {
 
   const Gym_sign = {
     title: "Waarom staan hier fitnessapparaten?",
-    paragraph: "Omdat ik in mijn vrije tijd graag naar de sportschool ga, daarom :)",
+    paragraph:
+      "Omdat ik in mijn vrije tijd graag naar de sportschool ga, daarom :)",
   };
 
   const Beach_sign = {
@@ -81,7 +82,7 @@ export default function Jonathan() {
     setTimeout(() => {
       setIsLoading(false);
       setIsOpen(true);
-    }, 3500);
+    }, 2500);
   }, []);
 
   function onMouseDown(e) {
