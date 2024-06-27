@@ -17,21 +17,27 @@ export default function Joey() {
   const [data, setData] = useState(Introduction);
 
   const bord1 = {
-    title: "Bord1",
+    title: "Bord 1:",
     paragraph:
-      "Ik ben enorm fan van horror over het algemeen, maar The Walking Dead is zonder twijfel mijn favoriete TV-serie!",
+      "Dit is een arcade machine. Als je goed kijkt, zie je op het scherm mijn favoriete spel: Overwatch. Dit spel speel ik al drie jaar en ik ben nog zeker niet uitgespeeld",
   };
 
   const bord2 = {
-    title: "Bord2",
+    title: "Bord 2:",
     paragraph:
-      "Zoals je ziet staat het getal “371” op het scorebord. Dit is natuurlijk niet zomaar, want als enorm grote voetbalfan zit ik inmiddels op dit aantal voetbalwedstrijden. Of het nou bij mijn favoriete club Feyenoord is of in Duitsland, ik hoop in elk voetbalstadion te zijn geweest!",
+      "Zoals je ziet, liggen er hier sportspullen. Ik ben namelijk veel in de sportschool te vinden! Ik ga zo’n 2 keer per week naar de sportschool en daarnaast loop ik regelmatig hard. ",
   };
 
   const bord3 = {
-    title: "Bord3",
+    title: "Bord 3:",
     paragraph:
-      "Het kroontje staat voor de naam van het stadion, ofwel de “King Arena”. Ook dit is niet zomaar, want ik ben geboren op koningsdag!",
+      "Dit is mijn laptop. Buiten dat ik werk als web developer, houd ik mij in mijn vrije tijd ook bezig met het experimenteren met mijn code.",
+  };
+
+  const bord4 = {
+    title: "Bord 4:",
+    paragraph:
+      "Een andere passie die ik heb, is voetbal. Mijn favoriete voetbalclub is Borussia Dortmund. Dit is een club in Duitsland en ik ga er ongeveer 3 keer per jaar naartoe.",
   };
 
   useEffect(() => {
@@ -52,8 +58,13 @@ export default function Joey() {
       setIsOpen(true);
     }
 
-    if (e.target.name === "sign4") {
+    if (e.target.name === "sign3") {
       setData(bord3);
+      setIsOpen(true);
+    }
+
+    if (e.target.name === "sign4") {
+      setData(bord4);
       setIsOpen(true);
     }
   }

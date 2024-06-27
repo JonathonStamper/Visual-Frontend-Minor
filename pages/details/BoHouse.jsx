@@ -45,12 +45,12 @@ export default function BoHouse() {
             het eindresultaat!
           </div>
         </div>
-        {/* 
+
         <div>
           <h2 className="text-4xl">Mijn resultaat</h2>
 
-          <img src="/media/blok1_joey.png" alt="Leerdoel image" />
-        </div> */}
+          <img src="/media/javascript.jpeg" alt="Leerdoel image" />
+        </div>
       </div>
     ),
   };
@@ -93,11 +93,11 @@ export default function BoHouse() {
           </div>
         </div>
 
-        {/* <div>
+        <div>
           <h2 className="text-4xl my-3">Mijn resultaat</h2>
 
-          <img src="/media/blok2_joey.png" alt="Leerdoel image" />
-        </div> */}
+          <img src="/media/design_system.jpeg" alt="Leerdoel image" />
+        </div>
       </div>
     ),
   };
@@ -137,9 +137,9 @@ export default function BoHouse() {
           tot het volgende resultaat!
         </div>
 
-        {/* <h2 className="text-4xl my-3">Mijn resultaat</h2>
+        <h2 className="text-4xl my-3">Mijn resultaat</h2>
 
-        <img src="/media/blok2_joey.png" alt="Leerdoel image" /> */}
+        <img src="/media/blender.jpeg" alt="Leerdoel image" />
       </div>
     ),
   };
